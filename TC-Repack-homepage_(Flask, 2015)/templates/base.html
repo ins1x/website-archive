@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}{% endblock %}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<noscript>
+			 Для полной функциональности этого сайта необходимо включить JavaScript.
+			 Вот <a href="http://www.enable-javascript.com/ru/" target="_blank">
+			 инструкции, как включить JavaScript в вашем браузере </a>.
+		</noscript>
+		<script type="text/javascript">
+		if (/MSIE (\d+\.\d+);/.test(navigator.userAgent)){var ieversion=new Number(RegExp.$1);location.replace("http://phpbbex.com/oldies/ru.html");}
+		</script>
+		<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" />
+		<link href="https://dl.dropboxusercontent.com/u/76170850/site/static/images/favicon.gif" type="image/png" rel="icon" />
+		<link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css' />
+		<!-- Dropbox hosted jquery libs
+		<script src="https://dl.dropboxusercontent.com/u/76170850/site/static/jqueryUI/js/jquery-1.10.2.js"></script> 
+		-- END -->
+		<!-- Jquery load from Google CDN-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!-- Pretty Photo plugin-->
+		<script src="https://dl.dropboxusercontent.com/u/76170850/site/static/js/jquery.prettyPhoto.js"></script>
+		<link href='https://dl.dropboxusercontent.com/u/76170850/site/static/css/prettyPhoto.css' rel='stylesheet' type='text/css' />
+		<script type="text/javascript" >
+			$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+			});
+		</script>
+		<!-- Scroll to Top -->
+		<script src="https://dl.dropboxusercontent.com/u/76170850/site/static/js/jquery.scroll2Top.min.js"></script>
+		<script>
+		$(document).ready(function(){
+			$('#to_the_top').hide();		
+			$(window).scroll(function () {
+				if ($(this).scrollTop() > 0) {
+					$('#to_the_top').fadeIn();
+				} else {
+					$('#to_the_top').fadeOut();
+				}
+			});
+			$('#to_the_top').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 400);
+				return false;
+			});
+		});
+		</script>
+		<!-- END Scroll to Top--> 
+		<!-- Script actiate spoilers-->
+		<script>
+		$(function() {
+			$('.spoiler-body').hide();
+			$('.spoiler-head').click(function(){
+				$(this).next().toggle();
+			})
+		});
+		</script>
+	{% block head %}{% endblock %}
+	</head>
+	<body>
+	<div style="display: block;" id="to_the_top"></div>
+		<div id="container">
+			<header><img src="https://dl.dropboxusercontent.com/u/76170850/site/static/images/site-logo.png"/>
+				<h1>
+					<p>
+						<center>
+						{% for href, caption in [('index', 'О сайте'),('downloads', 'Загрузки'),('contacts','Контакты')] %}
+					    <a href="#{{ href }}">{{ caption }}</a>
+						{% endfor %}
+						</center>
+					</p>
+				</h1>
+				{% block header %}{% endblock %}
+			</header>
+			<article>
+				{% block content %}{% endblock %}
+			</article>
+			<footer>
+				<table>
+				<tr>
+					<td>
+						<a title="Если вы видите этот банер значит у вас не установлен блокировщик рекламы" href="https://adblockplus.org/ru/about" ><img align="right" src="https://dl.dropboxusercontent.com/u/76170850/site/static/images/reklama.gif"/></a>
+					</td>
+					<td>
+						<center>
+						<p id="license">Если не указано иное, содержимое данного сайта доступно по лицензии	</br>
+						<a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.ru" target="_blank">Creative Commons Attribution 3.0 BY-NC</a>
+						<a href="mailto://ins16publick@gmail.com" title="Написать письмо администратору"><img src="https://dl.dropboxusercontent.com/u/76170850/site/static/images/mail.gif" /></a><br>
+						<a href="http://flask.pocoo.org/" target="_blank">Cодержимое сайта сгенерировано в Flask</a>, скачать исходники сайта можно <a href="https://www.dropbox.com/s/1x4u87j742rvrm2/last_snap.tar.gz?dl=0">здесь</a><br>
+						Шаблон адаптирован под мобильные платформы, и большинство <a href="http://ru.wikipedia.org/wiki/%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80" target="_blank">браузеров</a><br>
+						<!-- WMR - R390958227351 WMB - B102039424346 YAD - 41001826087356 -->
+						</center></p>
+					</td>
+					<td>
+						<!-- AddThis Button BEGIN -->
+						<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+							<a class="addthis_button_preferred_1"></a>
+							<a class="addthis_button_preferred_2"></a>
+							<a class="addthis_button_preferred_3"></a>
+							<a class="addthis_button_preferred_4"></a>
+							<a class="addthis_button_compact"></a>
+							<a class="addthis_counter addthis_bubble_style"></a>
+						</div>
+						<script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-514eb83c558f2f1b"></script>
+						<!-- AddThis Button END -->
+					</td>
+				</tr>
+				</table>
+			</footer>
+		</div>
+	</body>
+</html>

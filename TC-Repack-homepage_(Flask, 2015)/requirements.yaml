@@ -1,0 +1,7 @@
+#Requirements
+runtime: python27
+modules:
+- name: Flask
+	version: "0.9"
+- name: PyYaml
+	version: "3.1"

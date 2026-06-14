@@ -1,0 +1,208 @@
+a {
+	color: #000;
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+	color: blue;
+}
+
+body {
+	background: #000000 url('https://dl.dropboxusercontent.com/u/76170850/site/static/images/templatemo_main_bg.jpg') top left repeat;
+	padding-top: 2%;
+}
+
+h2 {
+	text-align: center;
+}
+
+h2 a {
+	color: #800040;
+	font-family: 'Marmelad', sans-serif;
+	font-size: 1em;
+	text-decoration: none;
+	margin-top: 0;
+}
+
+#container {
+	border-radius: 20px;
+	width: 98%; /* Ширина слоя */
+	margin: 0 auto; /* Выравнивание по центру */
+	background: #f0f0f0;
+}
+
+#container blockquote p
+{
+	border-left: solid 8px #006192;
+	padding-left: 1em;
+	margin-bottom: 0em;
+}
+
+#container table
+{
+	font-family: 'Marmelad', sans-serif;
+	font-size: 0.9em;
+	margin-bottom: 1em;
+    width: 100%; /* Ширина таблицы */
+	border-spacing: 0px 0px; /* Расстояние между ячейками */
+}
+
+#container table th
+{
+	border-radius: 5px 5px 0px 0px;
+	background: #006192;
+	text-align: left;
+	font-weight: bold;
+	padding: 0.3em;
+	font-family: 'Marmelad', sans-serif;
+}
+
+#container table td
+{
+	padding: 0.2em;
+	/*border: 1px dashed #000; Рамка таблицы*/
+}
+
+#container table tr.rowA
+{
+	text-align: left;
+	background-color: #EEECF9;
+	color: inherit;
+}
+
+#container table tr.rowB
+{
+	background-color: #CDD6EE;
+	color: inherit;
+}
+
+#services, #downloads, #news
+{
+/*Блоки для разделов*/
+	border-radius: 15px 15px 15px 15px;
+   	background: #f0f0f0;
+    padding: 3%; /* Поля вокруг текста */
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+header {
+/*Шапка сайта*/
+	background: #1F405C url('https://dl.dropboxusercontent.com/u/76170850/site/static/images/bg.png') top left repeat;
+	border-radius: 15px 15px 5px 5px;
+	border-bottom: solid 3px #ffa500;
+	display: block; /* Блочный элемент */
+	padding: 5px; /* Отступы вокруг текста */
+}
+
+header img {
+/*Выравнивание логотипа*/
+	float:left; 
+	margin: 0px 2px 0px 2%;
+}
+
+header h1 {
+	font-family: 'Marmelad', sans-serif;
+	font-size: 2em; /* Размер текста */
+	color: #000000;
+	margin: 0;
+}
+
+header a
+{
+	color: #C78957;
+	text-decoration: none;
+}
+
+header a:hover
+{
+	color: #800040;
+	text-decoration: none;
+}
+
+#avatar{
+/*Часть анимации аватара*/
+	margin-left: 15%;
+	/*visibility: hidden;*/
+	float: left;
+}
+
+#contactslist {
+/*Выравнивает список контактов по центру*/
+	margin:0 25% 0 25%;
+	width:50%;
+} 
+
+article {
+	font-family: 'Marmelad', sans-serif;
+	font-size: 1.6em;
+	text-align: justify;
+	display: block; /* Блочный элемент */
+	margin-left: 2%; /* Отступ справа */
+	margin-right: 2%; /* Отступ справа */
+	padding: 20px; /* Поля вокруг текста */
+	background: #fff; /* Цвет фона правой колонки */
+}
+
+article p {
+	margin-top: 0.3em /* Отступ сверху */
+}
+
+footer {
+	font-family: 'Marmelad', sans-serif;
+	font-size: 1em;
+	border-radius: 5px 5px 15px 15px;
+	border-top: solid 3px #ffa500;
+	display: block; /* Блочный элемент */
+	background: #1F405C url('https://dl.dropboxusercontent.com/u/76170850/site/static/images/bg.png') top left repeat;
+	color: #FFFFFF;
+	padding: 5px; /* Отступы вокруг текста */
+	/* text-align: center; Выравнивание текста по центру*/
+}
+
+.leftimg {
+/* Выравнивание изображения по леаому краю  */
+	float:left;
+	margin: 7px 7px 7px 0;
+}
+
+.rightimg {
+/* Выравнивание изображения по правому краю  */
+	float: right; 
+	margin: 7px 0 7px 7px;
+}
+
+.block{
+	padding: 10px;
+	border-top: 2px dashed #006192;
+	border-bottom: 2px dashed #006192;
+}
+
+#screens {
+	padding: 10px;
+	border: 2px dashed #006192;
+}
+
+#to_the_top {
+/* scroll2Top plugin init*/
+	display: none;
+	position: fixed;
+	cursor: pointer;
+	background: url('https://dl.dropboxusercontent.com/u/76170850/site/static/images/top.gif') no-repeat left top;
+	width: 51px;
+	height: 31px;
+	top: 440px;
+	right: 40px;
+}
+
+.spoiler-head {
+/* Для создания споилеров */
+    cursor: pointer;
+	text-decoration: underline;
+   /*  color: #FF6816; */
+}
+
+.spoiler-body {
+    border: 1px solid #C3CBD1;
+}

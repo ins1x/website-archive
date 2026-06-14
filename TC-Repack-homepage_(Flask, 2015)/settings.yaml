@@ -1,0 +1,23 @@
+# YAML settings file
+
+# Directories to exclude from the snap
+exclude:
+ - backup
+
+# You can specify the directories below, need to specify both directories at once
+# snaps_folder: '/home/ins/Dropbox/Backup/site/'
+folders:
+ snaps_folder: 'c:/Users/ins/Dropbox/Public/site/backup/'
+ site_folder: 'c:/Users/ins/Dropbox/Public/site/'
+
+# Local webserver address
+local_web_server_addr: 'http://127.0.0.1:5000'
+
+# Main page name
+main_page: "homepage.html"
+
+# Local main css file
+main_css_file: '/static/main.css'
+
+# Dropbox account setting
+dropbox_user_url: 'https://dl.dropboxusercontent.com/u/76170850/site'
