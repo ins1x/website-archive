@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+	Design by Free CSS Templates
+	http://www.freecsstemplates.org
+	Released for free under a Creative Commons Attribution 2.5 License
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Vbox</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://dl.dropbox.com/u/77665563/website/default.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/png" href="http://dl.dropbox.com/u/77665563/website/images/small/favicon.png" />
+<link rel="stylesheet" href="http://yandex.st/highlightjs/7.3/styles/googlecode.min.css">
+<script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+<div id="outer">
+	<div id="header">
+		<a href="http://dl.dropbox.com/u/77665563/website/index.html"><img src="http://dl.dropbox.com/u/77665563/website/images/logo.png"></img></a>
+	</div>
+	<div id="menu">
+		<ul>
+			<li class="first"><a href="http://dl.dropbox.com/u/77665563/website/index.html" accesskey="1" title="">Домашняя</a></li>
+			<!--<li><a href="#" accesskey="2" title="">Библиотека</a></li>-->
+			<li><a href="http://dl.dropbox.com/u/77665563/website/projects.html" accesskey="3" title="">Мои работы</a></li>
+			<!--<li><a href="#" accesskey="4" title="">Услуги</a></li>-->
+			<li><a href="http://dl.dropbox.com/u/77665563/website/contacts.html" accesskey="5" title="">Контакты</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<div id="tertiaryContent">
+				&nbsp;
+			<div class="xbg"></div>
+			<div class="xbg"></div>
+		</div>
+		<div id="primaryContentContainer">
+			<div id="primaryContent">
+				<h2>VboxBack первый релиз</h2>
+				<p>
+					<a href="http://ru.wikipedia.org/wiki/Application_programming_interface">API</a> для резервного копирования виртуальных машин
+					VirtualBox<br />
+					<br />
+					Тестировалось только на Linux но должно работать и на windows.Поддержка windows7 планируется в следующей версии
+					Необходим <a href="http://www.python.org/download/releases/2.7.3/">Python 2.7</a> версия <a href ="https://www.virtualbox.org/">OracleVirtualBox</a> не важна<br />
+					<b>Установка и настройка:</b><br/>
+					Распакуйте архив с программой в любое удобное для вас место(лучше всего в папку с виртуальными машинами VirtualBox)
+					Откройте в текстовом редакторе VBOXBackup.py и замените:<br />
+					<b>VboxMachinesPath = current_directory на VboxMachinesPath = "путь_к_папке_виртуальных_машин"</b><br />
+					<b>Первый запуск:</b> Создаст базу данных в которой будет храниться записи о виртуальных машинах
+					<pre><code class="python">import VBOXBackup as API
+from VBOXBackup import DATABASE
+from VBOXBackup import VboxMachinesPath
+base = API.db()							
+base.create_db(DATABASE,VboxMachinesPath)
+					</pre></code>
+					1.Импортируем <b>VBOXBackup.py</b> присваиваем ему имя API<br />
+					2-3.Импортируем константы<br />
+					4.Подключаем класс для работы с базой данных<br />
+					5.Вызываем функцию для создания базы данных в которую передаём (путь_к_базе,путь_к_папке_машин)<br />
+					<br />
+					Появляется база данных <a href="http://ru.wikipedia.org/wiki/SQLite">sqlite</a> machines.db .
+					Теперь можно создать бэкапы для всех найденных машин
+					<pre><code class="python">
+import VBOXBackup as API
+from VBOXBackup import DATABASE
+backup = API.backup()
+backup.backup_all_machines(DATABASE)
+					</pre></code>
+					Или для одной машины.Замените <b>VboxMachineName</b> на имя вашей машины (из базы данных).<br />
+					<pre><code class="python">
+import VBOXBackup as API
+from VBOXBackup import DATABASE
+VboxMachineName = 'windows_xp'
+backup = API.backup()
+backup.backup_by_name(VboxMachineName)
+					</pre></code>
+					Для восстановления из бэкапа:
+					<pre><code class="python">
+import VBOXBackup as API
+VboxMachineName = 'windows_xp'
+backup = API.backup()
+backup.restore_machine(VboxMachineName)
+					</pre></code>
+				Рекомендую для просмотра базы данных программу <a href="http://sqlitebrowser.sourceforge.net/">sqlitebrowser</a><br />
+				Используйте кодировку UTF-8
+				</p>
+				<h2><a href="http://yadi.sk/d/y_RIdv742UPnd">Cкачать v0.1ru</a></h2>
+				<h2><a href="http://yadi.sk/d/UkiuU4nZ2UPnP">Cкачать Примеры</a></h2>
+			</div>
+		</div>
+		<div id="secondaryContent">
+			&nbsp;
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div id="footer">
+		<p>Copyright &copy; 2013 Designed by <a href="http://www.freecsstemplates.org">Free CSS Templates </a>
+		<a href="mailto://ins16publick@gmail.com"><img src="http://dl.dropbox.com/u/77665563/website/images/mail.gif"></img></a></p>
+	</div>
+</div>
+</body>
+</html>

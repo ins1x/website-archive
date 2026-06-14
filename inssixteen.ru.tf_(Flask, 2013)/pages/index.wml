@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN" "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+<card>
+	<p align="center"><strong>Welcome</strong></p>
+	<p>
+		Sorry, site unfortunately does not yet support WPA mobile version.
+		Now we switched to a new standard XHTML Mobile 1.0
+		<a href="http://dl.dropbox.com/u/77665563/website/moblie.html">Modern page</a><br/>
+	</p>
+</card>
+</wml>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+  <channel>
+    <title>News</title>
+    <link>http://dl.dropbox.com/u/77665563/website/index.html</link>
+    <description>First feed</description>
+    <language>ru</language>
+    <pubDate>Пнд 11 Фев 2013</pubDate>
+ 
+    <lastBuildDate>Пнд 11 Фев 2013</lastBuildDate>
+    <docs>http://dl.dropbox.com/u/77665563/website/rss</docs>
+    <generator>Handmade</generator>
+    <managingEditor>ins16publick@gmail.com</managingEditor>
+    <webMaster>ins16publick@gmail.com</webMaster>
+ 
+    <item>
+      <title>Первый фид</title>
+      <link>http://dl.dropbox.com/u/77665563/website/index.html</link>
+      <description>Теперь RSS фачет</description>
+      <pubDate>Пнд 11 Фев 2013</pubDate>
+      <guid>http://dl.dropbox.com/u/77665563/website/index.html</guid>
+    </item>
+
+    <item>
+      <title>Renameimages v0.2.3</title>
+      <link>http://dl.dropbox.com/u/77665563/website/pages/projects/Renameimages.html</link>
+      <description>Renameimages - скрипт для для группового переименования изображений случайными именами.</description>
+      <pubDate>Вск 24 Фев 2013</pubDate>
+      <guid>http://dl.dropbox.com/u/77665563/website/pages/projects/Renameimages.html</guid>
+    </item>
+
+     <item>
+      <title>VboxBack v0.1.1</title>
+      <link>http://dl.dropbox.com/u/77665563/website/pages/projects/VboxBackup.html</link>
+      <description>Простая утилита которая помогает быстро создавать и восстанавливать резервные копии жёстких дисков vdi и vdmk. А также вести их учёт с помощью базы данных sqlite.</description>
+      <pubDate>Вто 19 Мар 2013</pubDate>
+      <guid>http://dl.dropbox.com/u/77665563/website/pages/projects/VboxBackup.html</guid>
+    </item>
+
+     <item>
+      <title>Сайт переехал на новый домен</title>
+      <link>http://inssixteen.ru.tf/</link>
+      <description>Сайт переехал на новый домен.Теперь быстрее загружается, сразу редиректит на dropbox, не режет ссылки и favicon.</description>
+      <pubDate>Вто 19 Мар 2013</pubDate>
+      <guid>http://inssixteen.ru.tf/</guid>
+    </item>
+  </channel>
+</rss>
