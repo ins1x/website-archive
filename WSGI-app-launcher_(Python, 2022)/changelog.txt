@@ -1,0 +1,61 @@
+﻿Changelog:
+[-] - Deleted, [+] - Added, [!] - Fixed, [*] - Testing.
+--v--0.1.5
+[!] fixed bug Wrong output README in log area. (linux)
+[+] netstat command show stat to 5000,8080 and custom port in log area
+[+] Stop server (Kill app procs by pid.) work on lin and win
+[!] Improved server reboot function
+[!] fixed Socket.Error Address already in use (linux)
+[!] fixed create many forks via start app
+[+] Close only GUI (CLI messages will be displayed)
+[!] fixed ifconfig not found error (linux debian)
+[*] Creates project backup an archive tar.gz
+[!] Autosave log, now not rewritten every time again
+[+] Open hosts file (linux and windows)
+[!] fixed import errors from the config
+[+] Select another app file
+--v--0.1.6
+[!] fix export config crash when rewrite configfile or configfile have zero size. (win python 3)
+[!] fix encoding bug if path contain ascii symbols (linux debian)
+[+] install packets from pip by requirements file
+[!] Readme opens in the standard editor instead of outputting to the log
+[!] Remove logs if has reached the maximum value
+[!] fixed Error exporting settings for third-party applications
+[+] Pip list packages
+[!] Log active at startup
+[+] Add link open /admin panel in browser
+[+] Show app status and statistics
+[+] Popular port checker.
+[!] fixed Error writing the log if the application is running without system privileges (linux)
+[+] Ip tools (check publick and local ip, ARP table, routes table)
+[+] Show list of running svchost instances (windows)
+[+] Check root rigths (linux)
+[+] Show backup list
+[+] GUI configure launcher
+[!] Complete ports description
+[!] The launcher does not crash if the name of the application or the project's root folder consists of random characters (for example as#2+_!R.3)
+--v--0.1.7
+[+] Detect another microframeworks CherryPy, KissPy, Tornado, Falcon, Bottle, Itty-Bitty
+[!] Improved auto definition of used framework
+[!] Fix open index error if app not runned
+[!] Fix wrong output in shell on exit
+[!] Fix local ip detect on linux, now work on all platforms
+[*] dual app boot test (put 2-3 app in project dir)
+[!] fix taskkill 0 pid error, 3num pid error (windows)
+[+] Wrong start detect, ignores when parsing the base files (__init.py__, __about__,etc)
+[-] TTK module excluded.
+[+] Show runned python processes
+[!] Improved netstat function, add Reverse DNS func.
+[!] Improved backup function - check root dir, add backups size in statistics, warn if backups empty
+[!] Improved os detection use /cat/issue on linux and detect more windows versions (NT-10)
+[*] Tested on ubuntu\centos\debian
+[!] Fix launcher fall if put launcher in empty enviroment
+[+] Add startproject function (generate automatically folders and files)
+[!] fix inccorrect GUI size init from configfile.
+[+] New homepage made with the flask framework.
+[+] Can open the configuration files in xfce use mousepad
+[!] Fix the possibility to add a description to a log at run time.
+--v--0.1.r
+[!] fix undefined behavior in backup_list() func
+[!] More links in help menu
+[!] 1st release

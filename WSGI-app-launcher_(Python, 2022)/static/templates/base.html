@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<meta charset="utf-8">
+<head>
+	{% block head %}
+	    <title>{% block title %}{% endblock %}</title>
+	{% endblock %}
+</head>
+<body>
+	<header>
+		<img src="{{ url_for('static', filename='logo.png') }}"/>Launcher.py
+		<center>
+		{% for href, caption in [('index', 'index'), ('changelog','changelog')] %}
+		   //<a href="/{{ href }}">{{ caption }}</a>
+		{% endfor %}
+		</center>
+	</header>
+    <article>
+		{% block content %} {% endblock %}
+	</article>
+		<footer><p>&copy; Created by 1NS.</p></footer>
+</body>
+</html>

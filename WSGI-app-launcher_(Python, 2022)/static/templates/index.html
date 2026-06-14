@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}homepage{% endblock %}
+{% block head %}
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+	    <!-- Jquery load from Google CDN-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<!-- Pretty Photo plugin-->
+		<script src="{{ url_for('static', filename='js/jquery.prettyPhoto.js') }}"></script>
+		<link href="{{ url_for('static', filename='css/prettyPhoto.css') }}" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" >
+			$(document).ready(function(){
+			$("a[rel^='prettyPhoto']").prettyPhoto();
+			});
+		</script>
+{% endblock %}
+{% block content %}
+		<h2>Launcher.py <ins16mail@gmail.com></h2>
+		<p><h3>About:</h3>
+		A simple launcher for python web applications, allows you to manage the project on a local server. 
+		This application was not developed for industrial applications but only for local and test servers
+		Uses standard modules and Tkinter GUI. It does not integrate with the Django modules and the Flask. 
+		Work on Windows/Linux Python 2.6.x/Python 3.2.x
+		Tested on WindowsXP/7, Linux Mint/Debian with frameworks Flask 0.9/Django 1.9
+		</p>
+		<p>
+			<h3>Using:</h3>
+			If there are more than one application in the folder, the application from the root folder will be launched first. 
+			If there are several applications in the root folder, then automatically the first one will be selected according to the alphabetical order.
+
+			Does not require installation (portability), move launcher.py in the folder with your (Django or Flask) project.</p>
+					
+			<div id="screens">
+				<p><center>
+					<a href="{{ url_for('static', filename='img/large/gui1.png') }}" rel="prettyPhoto[pp_gal]">
+					<img src="{{ url_for('static', filename='img/thumbnails/thmb_gui1.jpg') }}" width="460" height="320" alt=""/></a>
+					<a href="{{ url_for('static', filename='img/large/gui2.png') }}" rel="prettyPhoto[pp_gal]">
+					<img src="{{ url_for('static', filename='img/thumbnails/thmb_gui2.jpg') }}" width="460" height="320" alt=""/></a>
+					<a href="{{ url_for('static', filename='img/large/gui3.png') }}" rel="prettyPhoto[pp_gal]">
+					<img src="{{ url_for('static', filename='img/thumbnails/thmb_gui3.jpg') }}" width="460" height="320" alt=""/></a>
+				</p></center>
+			</div>
+{% endblock %}

@@ -1,0 +1,136 @@
+html {
+	background-color: #f5f5f5;
+	font-size: 16pt;
+}
+header {
+	font-size: 1.8em;
+	font-weight: bold;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+article {
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: justify;
+}
+footer {
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: right;
+}
+h2 {
+	font-weight: bold;
+	font-style: inherit;
+	font-size: 1.3em;
+	font-family: inherit;
+	color: #666666;
+	vertical-align: baseline;
+}
+h1 {
+	font-size: 1.7em;
+	color: #666666;
+}
+table, th, td {
+	border-style:solid;
+	border-width:1px;
+	border-collapse:collapse;
+	padding: 0.2em;
+}
+th {
+	background-color:#006192;
+	border-color:black;
+	color:white;
+}
+table tr.rowA
+{
+	text-align: left;
+	background-color: #EEECF9;
+	color: inherit;
+}
+table tr.rowB
+{
+	background-color: #CDD6EE;
+	color: inherit;
+}
+table td.rowA
+{
+	background-color: #EEECF9;
+	color: inherit;
+}
+table td.rowB
+{
+	background-color: #CDD6EE;
+	color: inherit;
+}
+
+.disclaimer {
+	font-style: italic;
+}
+
+.clr {
+	clear:both;
+	padding:0;
+	margin:0;
+	width:100%;
+	font-size:0;
+	line-height:0;
+}
+
+ol {
+	list-style:none;
+}
+ol li {
+	display:block;
+	clear:both;
+}
+ol li label {
+	display:block;
+	margin:0;
+	padding:16px 0 0 0;
+}
+ol li input.text {
+	width:480px;
+	border:1px solid #c0c0c0;
+	margin:2px 0;
+	padding:5px 2px;
+	height:16px;
+	background:#fff;
+}
+ol li textarea {
+	width:480px;
+	border:1px solid #c0c0c0;
+	margin:2px 0;
+	padding:2px;
+	background:#fff;
+}
+ol li .send {
+	margin:16px 0 0 0;
+}
+
+.columngroup {
+	float: left;
+	width: 950px;
+	position: relative;
+	padding: 15px;
+	margin-top: -14px;
+	margin-bottom: 25px;
+	background: transparent;
+	border-top: 1px solid #A3A3A3;
+	-moz-column-count: 3; /* Firefox */
+	-webkit-column-count: 3; /* Safari and Chrome */
+	column-count: 3;
+	-moz-column-gap: 40px; /* Firefox */
+	-webkit-column-gap: 40px; /* Safari and Chrome */
+	column-gap: 40px;
+	-moz-column-rule: 1px solid #A3A3A3; /* Firefox */
+	-webkit-column-rule: 1px solid #A3A3A3; /* Safari and Chrome */
+	column-rule: 1px solid #A3A3A3;
+}
+a:link { color: #CC3333; } 
+a:visited { color: #a32929; }
+a:active { color: #6b101c; }
+a:hover { text-decoration: none; } 
