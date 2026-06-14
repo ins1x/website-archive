@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/*!
+ * Custom style params for Pico CSS ✨ v2.1.1 (https://picocss.com)
+ * CSS variables for color schemes https://picocss.com/docs/css-variables
+ */
+
+/* Global PICO style variables */
+ :root {
+  --pico-border-radius: 1.5rem;
+  --pico-typography-spacing-vertical: 0.5rem;
+  --pico-nav-element-spacing-horizontal: 0.25rem;
+  --pico-nav-element-spacing-vertical: 0.2rem;
+  --pico-block-spacing-vertical: 1rem;
+  --pico-block-spacing-horizontal: 2rem;
+  --pico-font-family: Pacifico, cursive;
+  --pico-font-weight: 200;
+  --pico-font-size: 120%;
+}
+
+ /* Style for mobile devices */
+ @media screen and (max-width: 600px) {
+  :root {
+    --pico-font-family: Pacifico, cursive;
+    --pico-font-size: 75%;
+    --pico-block-spacing-horizontal: 1rem;
+  }
+  #navmenu {
+    display: none;
+  }
+  /* nav {
+    position: fixed;
+    width: 95%;
+  } */
+  table {
+    border-collapse: separate;
+    border-spacing: 1px 1px;
+  }
+  td, th {
+    padding: 1px 1px;
+  }
+  img {
+    max-width: 30%;
+    height: auto;
+  }
+}
+
+/* Style for desktop devices */
+@media only screen and (min-width: 1200px) {
+  /* Hide mobile menu on desktop */
+  #mobmenu {
+    display: none;
+  }
+}
+
+body {
+  background: #11161F;
+  background: linear-gradient(90deg,rgba(17, 22, 31, 1) 0%, rgba(20, 24, 38, 1) 35%, rgba(17, 22, 31, 1) 100%);
+}
+
+article {
+  text-align: justify;
+}
+
+h1, h2, h3, h4 {
+  color: #0172ad;
+}
+
+blockquote {
+  color: #909090;
+}
+
+nav {
+  background: #181c25;
+  border-radius: var(--pico-border-radius);
+  justify-content: space-around;
+}
+
+#navmenu {
+  color: #2a3140;
+  font-size: 1.1rem;
+  font-family: Verdana, Helvetica, sans-serif;
+  font-weight: bold; 
+  text-transform: uppercase;
+}
+
+footer {
+  font-style: italic;
+  text-align: center;
+  color: #909090;
+}
