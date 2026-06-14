@@ -1,0 +1,37 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {padding:0;margin:0}
+table {border-collapse:collapse; border-spacing:0}
+caption,th {text-align:left}
+h1,h2,h3,h4,h5,h6 {font-size:1em}
+address,caption,cite,code,dfn,th,var {font-style:normal; font-weight:normal}
+q:before,q:after {content:”;}
+
+img {border:0; vertical-align:top}
+
+a:focus, a:active {outline:none}
+
+.cfix:after, .clear-li li:after {content:".";display:block;font-size:1px;height:0;clear:both;visibility:hidden}
+.cfix, .clear-li li {display:inline-block}
+/* Hide from IE Mac \*/
+.cfix, .clear-li li {display:block}
+/* End hide from IE Mac */
+
+ul {list-style-type:none}
+
+.clr {clear:both; height:1px; font-size:1px; visibility:hidden; margin:0px;}
+
+.cr {position:absolute; overflow:hidden; font-size:1px}
+.c-tl {top:0; left:0; background-position:0 0}
+.c-tr {top:0; right:0; background-position:100% 0}
+.c-bl {bottom:0; left:0; background-position:0 100%}
+.c-br {bottom:0; right:0; background-position:100% 100%}
+
+.ui-tabs-hide {display:none}
+
+.clrr {
+	font-size: 0px;
+	display: block;
+	clear: both;
+}
+
+
+
