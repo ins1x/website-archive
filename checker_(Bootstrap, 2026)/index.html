@@ -1,0 +1,626 @@
+<!doctype html>
+<html lang="ru-BY" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="1NS"
+      content="Online-tools list"
+    />
+    <title>Checker</title>
+    <script src="assets/js/color-modes.js"></script>
+    <link rel="shortcut icon" href="assets/img/favicon.png"/>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="theme-color" content="#712cf9" />
+    <link href="assets/css/custom.css" rel="stylesheet" />
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+      <!-- color modes symbols-->
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path
+          d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"
+        ></path>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path
+          d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"
+        ></path>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path
+          d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"
+        ></path>
+        <path
+          d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"
+        ></path>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path
+          d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"
+        ></path>
+      </symbol>
+      <!-- main svg symbols-->
+      <symbol id="home" viewBox="0 0 16 16">
+        <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"></path>
+      </symbol>
+      <symbol id="cpu-fill" viewBox="0 0 16 16">
+        <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"></path>
+        <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z"></path>
+      </symbol>
+      <symbol id="tools" viewBox="0 0 16 16">
+        <path d="M1 0L0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"></path>
+      </symbol>
+      <symbol id="bi-pc-display" viewBox="0 0 16 16">
+        <path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z"/>
+      </symbol>
+      <symbol id="bi-ethernet" viewBox="0 0 16 16">
+        <path d="M14 13.5v-7a.5.5 0 0 0-.5-.5H12V4.5a.5.5 0 0 0-.5-.5h-1v-.5A.5.5 0 0 0 10 3H6a.5.5 0 0 0-.5.5V4h-1a.5.5 0 0 0-.5.5V6H2.5a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5M3.75 11h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m2 0h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m1.75.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25zM9.75 11h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25v-1.5a.25.25 0 0 1 .25-.25m1.75.25a.25.25 0 0 1 .25-.25h.5a.25.25 0 0 1 .25.25v1.5a.25.25 0 0 1-.25.25h-.5a.25.25 0 0 1-.25-.25z"/>
+      </symbol>
+      <symbol id="bi-globe2" viewBox="0 0 16 16">
+        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+      </symbol>
+      <symbol id="bi-database-fill-slash" viewBox="0 0 16 16">
+        <path d="M13.879 10.414a2.501 2.501 0 0 0-3.465 3.465zm.707.707-3.465 3.465a2.501 2.501 0 0 0 3.465-3.465m-4.56-1.096a3.5 3.5 0 1 1 4.949 4.95 3.5 3.5 0 0 1-4.95-4.95ZM8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1"/>
+        <path d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12 12 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7m6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.55 4.55 0 0 1 .23-2.002m-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.5 4.5 0 0 1-1.3-1.905"/>
+      </symbol>
+      <symbol id="bi-diagram-3-fill" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zm-6 8A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm6 0A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm6 0a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5z"/>
+      </symbol>
+      <symbol id="bi-envelope-slash" viewBox="0 0 16 16">
+        <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z"/>
+        <path d="M14.975 10.025a3.5 3.5 0 1 0-4.95 4.95 3.5 3.5 0 0 0 4.95-4.95m-4.243.707a2.5 2.5 0 0 1 3.147-.318l-3.465 3.465a2.5 2.5 0 0 1 .318-3.147m.39 3.854 3.464-3.465a2.501 2.501 0 0 1-3.465 3.465Z"/>
+      </symbol>
+      <symbol id="bi-github" viewBox="0 0 16 16">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+      </symbol>
+      <symbol id="bi-globe-americas" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
+      </symbol>
+      <symbol id="bi-info-circle" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+      </symbol>
+      <symbol id="bi-shift" viewBox="0 0 16 16">
+        <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816zM14.346 9.5 8 2.731 1.654 9.5H4.5a1 1 0 0 1 1 1v3h5v-3a1 1 0 0 1 1-1z"/>
+      </symbol>
+      <symbol id="bi-arrow-up-square" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm8.5 9.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
+      </symbol>
+      <symbol id="bi-pass" viewBox="0 0 16 16">
+        <path d="M5.5 5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"/>
+        <path d="M8 2a2 2 0 0 0 2-2h2.5A1.5 1.5 0 0 1 14 1.5v13a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-13A1.5 1.5 0 0 1 3.5 0H6a2 2 0 0 0 2 2m0 1a3 3 0 0 1-2.83-2H3.5a.5.5 0 0 0-.5.5v13a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-13a.5.5 0 0 0-.5-.5h-1.67A3 3 0 0 1 8 3"/>
+      </symbol>
+      <symbol id="bi-map" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.5.5 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103M10 1.91l-4-.8v12.98l4 .8zm1 12.98 4-.8V1.11l-4 .8zm-6-.8V1.11l-4 .8v12.98z"/>
+      </symbol>
+      <symbol id="bi-bar-chart-steps" viewBox="0 0 16 16">
+        <path d="M.5 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 .5 0M2 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5z"/>
+      </symbol>
+      <symbol id="bi-calculator" viewBox="0 0 16 16">
+        <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+        <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+      </symbol>
+    </svg>
+    
+    <!-- color-modes -->
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button
+        class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+        id="bd-theme"
+        type="button"
+        aria-expanded="false"
+        data-bs-toggle="dropdown"
+        aria-label="Toggle theme (auto)"
+      >
+        <svg class="bi my-1 theme-icon-active" aria-hidden="true">
+          <use href="#circle-half"></use>
+        </svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul
+        class="dropdown-menu dropdown-menu-end shadow"
+        aria-labelledby="bd-theme-text"
+      >
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="light"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#sun-fill"></use>
+            </svg>
+            Light
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center"
+            data-bs-theme-value="dark"
+            aria-pressed="false"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#moon-stars-fill"></use>
+            </svg>
+            Dark
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            type="button"
+            class="dropdown-item d-flex align-items-center active"
+            data-bs-theme-value="auto"
+            aria-pressed="true"
+          >
+            <svg class="bi me-2 opacity-50" aria-hidden="true">
+              <use href="#circle-half"></use>
+            </svg>
+            Auto
+            <svg class="bi ms-auto d-none" aria-hidden="true">
+              <use href="#check2"></use>
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+    
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md fixed-bottom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#" aria-label="Up"
+        ><svg class="bi" width="24" height="24">
+          <use xlink:href="#bi-arrow-up-square"></use></svg>
+        </a>
+      </div>
+    </nav>
+
+    <main class="container">
+
+      <div class="col">
+        <div class="card">
+          <div class="row g-0">
+            <div class="col-md-4">
+            <!-- Add menu here-->
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <!-- <h5 class="card-title">Card title</h5> -->
+                <h1 class="display-2 fw-bold">Online-checker</h1>
+                <p class="card-text">
+                  <p class="col-md-8 fs-4">
+                    Check internet resources using various online tools
+                  </p>
+                  <div class="input-group mb-3">
+					          <div class="dropdown">
+                      <button
+                        class="btn btn-primary dropdown-toggle"
+                        id="button-dropdown"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Whois
+                      </button>
+                      <ul class="dropdown-menu" id="dropdown-search">
+                        <li><h6 class="dropdown-header">Select service</h6></li>
+                        <li><a class="dropdown-item" href="#">Trace</a></li>
+                        <li><a class="dropdown-item" href="#">Ping</a></li>
+                        <li><a class="dropdown-item" href="#">MAC</a></li>
+                        <li><a class="dropdown-item" href="#">DNS</a></li>
+                        <li><a class="dropdown-item" href="#">Spam-base</a></li>
+                        <li><a class="dropdown-item" href="#">Check-host</a></li>
+                      </ul>
+                    </div>
+                    <input type="text" class="form-control" placeholder="" aria-label="IP or site input" aria-describedby="button-addon1" id="input-Go">
+                    <button class="btn btn-outline-primary" type="button" id="button-Go">Go</button>
+                  </div>
+                </p>
+                <p class="card-text" id="card-text-secondary">
+                  <small class="text-body-secondary">Last updated 2/06/2026</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container px-3 py-5" id="icon-grid">
+        <h2 class="pb-2 border-bottom">Online tools</h2>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 py-5"
+        >
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-info-circle"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                Whois
+              </h3>
+              <p>
+                Информация о IP и домене
+              </p>
+              <ul>
+                <li><a href="https://who.is/">who.is</a></li>
+                <li><a href="https://apps.db.ripe.net/db-web-ui/query">RIPE</a></li>
+                <li><a href="https://whois.hoster.by/">hoster.by</a></li>
+                <li><a href="https://www.reg.ru/whois/check_site">reg.ru</a></li>
+                <li><a href="https://2ip.ru/site-availability/">2ip.ru</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-bar-chart-steps"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                Traceroute
+              </h3>
+              <p>
+                Трассировка онлайн
+              </p>
+                <ul>
+                  <li><a href="https://traceroute-online.com">traceroute-online</a></li>
+                  <li><a href="https://mxtoolbox.com/TraceRouteLookup.aspx">ICMP-trace</a></li>
+                  <li><a href="https://tools.bunny.net/traceroute">tools.bunny.net</a></li>
+                  <li><a href="https://host-tracker.com/en/ic/check-trace">host-tracker</a></li>
+                </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-ethernet"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                Ping
+              </h3>
+              <p>
+                Пинг онлайн
+              </p>
+                <ul>
+                  <li><a href="https://ping.pe">ping.pe</a></li>
+                  <li><a href="https://ping.eu">ping.eu</a></li>
+                  <li><a href="https://dnschecker.org/ping-ipv4.php">IP-Pinger</a></li>
+                </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-envelope-slash"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                Спам базы
+              </h3>
+              <p>
+                Проверить IP в спам-базах
+              </p>
+              <ul>
+                <li><a href="https://mxtoolbox.com/SuperTool.aspx?action=mx%3a93.85.82.1&run=toolpage#">MX Toolbox</a></li>
+                <li><a href="https://2ip.ru/spam/">2ip.ru</a></li>
+                <li><a href="https://portscaner.ru/ip-blacklist-checker">portscaner.ru</a></li>
+                <li><a href="https://www.barracudacentral.org/lookups">barracudacentral.org</a></li>
+                <li><a href="https://check.spamhaus.org/">spamhaus</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-globe-americas"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                Sites-available
+              </h3>
+              <p>
+                Проверка доступности сайта
+              </p>
+              <ul>
+                <li><a href="https://downdetector.com/">downdetector</a></li>
+                <li><a href="https://www.reg.ru/whois/check_site">reg.ru</a></li>
+                <li><a href="https://2ip.ru/site-availability/">2ip.ru</a></li>
+                <li><a href="https://www.host-tracker.com">host-tracker</a></li>
+                <li><a href="https://check-host.net/check-http">check-host</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-database-fill-slash"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                Blacklist
+              </h3>
+              <p>
+                Проверка в заблокированных ресурсах
+              </p>
+              <ul>
+                <li><a href="https://tools.zvelo.com/">zvelo</a></li>
+                <li><a href="https://url.fortinet.net/rate/submit.php">fortinet</a></li>
+                <li><a href="https://belgie.by/ru/other/info">БелГИЭ</a></li>
+                <li><a href="https://multirbl.valli.org/lookup">MultiRBL</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-diagram-3-fill"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                Open ports
+              </h3>
+              <p>
+                Проверка открытых портов
+              </p>
+              <ul>
+                <li><a href="https://2ip.io/ru/check-port">2ip.io</a></li>
+                <li><a href="https://www.reg.ru/web-tools/port-checker">reg.ru</a></li>
+                <li><a href="https://tools.ivit.pro/setevye-utility/avail-services/">tools.ivit.pro</a></li>
+                <li><a href="https://portchecker.co/">portchecker.co</a></li>
+                <li><a href="https://dnsrobot.net/ru/port-checker">dnsrobot.net</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-globe2"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                DNS
+              </h3>
+              <p>
+                Проверка DNS записей и субдоменов
+              </p>
+              <ul>
+                <li><a href="https://dnschecker.org/all-dns-records-of-domain.php">dnschecker.org</a></li>
+                <li><a href="https://www.abuseipdb.com/tools/dns-lookup">abuseipdb</a></li>
+                <li><a href="https://rapiddns.io/">rapiddns.io</a></li>
+                <li><a href="https://radar.cloudflare.com/dns">cloudflare DNS</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#tools"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                HTTP
+              </h3>
+              <p>
+                Проверка HTTP запросов
+              </p>
+              <ul>
+                <li><a href="https://httpbin.org/">httpbin</a></li>
+                <li><a href="https://httpbun.com/">httpbun</a></li>
+                <li><a href="https://mockhttp.org/">mockhttp</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-pass"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                SSL
+              </h3>
+              <p>
+                Проверка SSL сертификатов
+              </p>
+              <ul>
+                <li><a href="https://sslshopper.com/ssl-checker.html">sslshopper</a></li>
+                <li><a href="https://ssl.org/">ssl.org</a></li>
+                <li><a href="https://ssllabs.com/ssltest/">ssllabs</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-map"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                ASN Lookup
+              </h3>
+              <p>
+                Информация об Автономной Системе (AS)
+              </p>
+              <ul>
+                <li><a href="https://bgp.he.net/">bgp.he.net</a></li>
+                <li><a href="https://www.peeringdb.com/">peeringdb</a></li>
+                <li><a href="https://www.submarinecablemap.com/supplier/asn">submarinecablemap</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h2 class="pb-2 border-bottom">Client-check</h2>
+        <div
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-3 py-5"
+        >
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-pc-display"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                MAC-Vendor
+              </h3>
+              <p>
+                Определение производителя по MAC-адресу
+              </p>
+                <ul>
+                  <li><a href="https://macvendors.com/">MAC vendors</a></li>
+                  <li><a href="https://maclookup.app/">MAC Address Lookup</a></li>
+                  <li><a href="https://metroethernet.ru/tools/oui">metroethernet</a></li>
+                  <li><a href="https://macaddresslookup.io/">macaddresslookup</a></li>
+                  <li><a href="https://wintelguy.com">wintelguy.com</a></li>
+                </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#home"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                My IP
+              </h3>
+              <p>
+                Проверить свой IP
+              </p>
+                <ul>
+                  <li><a href="https://www.whatismyip.com/">whatismyip</a></li>
+                  <li><a href="https://ipaddress.my/">ipaddress.my</a></li>
+                  <li><a href="https://test-ipv6.com/">test-ipv6</a></li>
+                </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#bi-calculator"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                Subnet-calc
+              </h3>
+              <p>
+                Расчет подсетей
+              </p>
+                <ul>
+                  <li><a href="https://ipcalc.co/">ipcalc.co</a></li>
+                  <li><a href="https://edgecenter.ru/dev-tools/calc-net-ipv6">calc-net-ipv6</a></li>
+                  <li><a href="https://shootnick.ru/ip_calc/">ip-calc</a></li>
+                  <li><a href="https://ip-calculator.ru">ip-calculator.ru</a></li>
+                </ul>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <svg
+              class="bi text-body-secondary flex-shrink-0 me-3"
+              width="1.75em"
+              height="1.75em"
+              aria-hidden="true"
+            >
+              <use xlink:href="#cpu-fill"></use>
+            </svg>
+            <div>
+              <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">
+                Browser
+              </h3>
+              <p>
+                Браузерные тесты
+              </p>
+                <ul>
+                  <li><a href="https://caniuse.com/">caniuse.com</a></li>
+                  <li><a href="https://get.webgl.org/">webGL</a></li>
+                  <li><a href="https://html5test.com/">html5test</a></li>
+                  <li><a href="https://browserleaks.com/">browserleaks.com</a></li>
+                </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <span class="mb-3 mb-md-0 text-body-secondary">
+              Built with &#127866; and <a href="https://getbootstrap.com">Bootstrap</a> framework by <a href="https://github.com/ins1x">ins1x</a>
+            </span>
+          </div>
+        </footer>
+      </div>
+
+    </main>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <!-- No AI. Just beer powered-->
+  </body>
+</html>
